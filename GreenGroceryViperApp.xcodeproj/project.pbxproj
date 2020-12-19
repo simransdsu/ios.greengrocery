@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		49BAA24B258BD5AD00DECC86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA24A258BD5AD00DECC86 /* AppDelegate.swift */; };
 		49BAA24D258BD5AD00DECC86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA24C258BD5AD00DECC86 /* SceneDelegate.swift */; };
-		49BAA24F258BD5AD00DECC86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA24E258BD5AD00DECC86 /* ViewController.swift */; };
+		49BAA24F258BD5AD00DECC86 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA24E258BD5AD00DECC86 /* HomeViewController.swift */; };
 		49BAA252258BD5AD00DECC86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BAA250258BD5AD00DECC86 /* Main.storyboard */; };
 		49BAA254258BD5AF00DECC86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49BAA253258BD5AF00DECC86 /* Assets.xcassets */; };
 		49BAA257258BD5AF00DECC86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BAA255258BD5AF00DECC86 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		49BAA247258BD5AD00DECC86 /* GreenGroceryViperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenGroceryViperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49BAA24A258BD5AD00DECC86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49BAA24C258BD5AD00DECC86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		49BAA24E258BD5AD00DECC86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		49BAA24E258BD5AD00DECC86 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		49BAA251258BD5AD00DECC86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49BAA253258BD5AF00DECC86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49BAA256258BD5AF00DECC86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,23 @@
 		49BAA249258BD5AD00DECC86 /* GreenGroceryViperApp */ = {
 			isa = PBXGroup;
 			children = (
+				49BAA25F258BD5EB00DECC86 /* HomeModule */,
 				49BAA24A258BD5AD00DECC86 /* AppDelegate.swift */,
 				49BAA24C258BD5AD00DECC86 /* SceneDelegate.swift */,
-				49BAA24E258BD5AD00DECC86 /* ViewController.swift */,
 				49BAA250258BD5AD00DECC86 /* Main.storyboard */,
 				49BAA253258BD5AF00DECC86 /* Assets.xcassets */,
 				49BAA255258BD5AF00DECC86 /* LaunchScreen.storyboard */,
 				49BAA258258BD5AF00DECC86 /* Info.plist */,
 			);
 			path = GreenGroceryViperApp;
+			sourceTree = "<group>";
+		};
+		49BAA25F258BD5EB00DECC86 /* HomeModule */ = {
+			isa = PBXGroup;
+			children = (
+				49BAA24E258BD5AD00DECC86 /* HomeViewController.swift */,
+			);
+			path = HomeModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49BAA24F258BD5AD00DECC86 /* ViewController.swift in Sources */,
+				49BAA24F258BD5AD00DECC86 /* HomeViewController.swift in Sources */,
 				49BAA24B258BD5AD00DECC86 /* AppDelegate.swift in Sources */,
 				49BAA24D258BD5AD00DECC86 /* SceneDelegate.swift in Sources */,
 			);
