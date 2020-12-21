@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49562EEC258D7C1D00E81D1A /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49562EEB258D7C1D00E81D1A /* HomePresenter.swift */; };
+		49562EEF258D7C8A00E81D1A /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49562EEE258D7C8A00E81D1A /* HomeRouter.swift */; };
+		49562EF2258D7CC400E81D1A /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49562EF1258D7CC400E81D1A /* HomeInteractor.swift */; };
+		49562EF5258D7D7C00E81D1A /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49562EF4258D7D7C00E81D1A /* HomeModel.swift */; };
 		49BAA24B258BD5AD00DECC86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA24A258BD5AD00DECC86 /* AppDelegate.swift */; };
 		49BAA24D258BD5AD00DECC86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA24C258BD5AD00DECC86 /* SceneDelegate.swift */; };
 		49BAA24F258BD5AD00DECC86 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA24E258BD5AD00DECC86 /* HomeViewController.swift */; };
 		49BAA252258BD5AD00DECC86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BAA250258BD5AD00DECC86 /* Main.storyboard */; };
 		49BAA254258BD5AF00DECC86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49BAA253258BD5AF00DECC86 /* Assets.xcassets */; };
 		49BAA257258BD5AF00DECC86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BAA255258BD5AF00DECC86 /* LaunchScreen.storyboard */; };
+		49F78D5925901BD60085ABB6 /* HomeModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F78D5825901BD60085ABB6 /* HomeModuleBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49562EEB258D7C1D00E81D1A /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		49562EEE258D7C8A00E81D1A /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		49562EF1258D7CC400E81D1A /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		49562EF4258D7D7C00E81D1A /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		49BAA247258BD5AD00DECC86 /* GreenGroceryViperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenGroceryViperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49BAA24A258BD5AD00DECC86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49BAA24C258BD5AD00DECC86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +33,7 @@
 		49BAA253258BD5AF00DECC86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49BAA256258BD5AF00DECC86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49BAA258258BD5AF00DECC86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49F78D5825901BD60085ABB6 /* HomeModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49562EF7258D7DC600E81D1A /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				49562EF4258D7D7C00E81D1A /* HomeModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		49BAA23E258BD5AD00DECC86 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +74,7 @@
 		49BAA249258BD5AD00DECC86 /* GreenGroceryViperApp */ = {
 			isa = PBXGroup;
 			children = (
+				49562EF7258D7DC600E81D1A /* Entity */,
 				49BAA25F258BD5EB00DECC86 /* HomeModule */,
 				49BAA24A258BD5AD00DECC86 /* AppDelegate.swift */,
 				49BAA24C258BD5AD00DECC86 /* SceneDelegate.swift */,
@@ -71,6 +90,10 @@
 			isa = PBXGroup;
 			children = (
 				49BAA24E258BD5AD00DECC86 /* HomeViewController.swift */,
+				49562EEB258D7C1D00E81D1A /* HomePresenter.swift */,
+				49562EEE258D7C8A00E81D1A /* HomeRouter.swift */,
+				49562EF1258D7CC400E81D1A /* HomeInteractor.swift */,
+				49F78D5825901BD60085ABB6 /* HomeModuleBuilder.swift */,
 			);
 			path = HomeModule;
 			sourceTree = "<group>";
@@ -145,9 +168,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F78D5925901BD60085ABB6 /* HomeModuleBuilder.swift in Sources */,
 				49BAA24F258BD5AD00DECC86 /* HomeViewController.swift in Sources */,
 				49BAA24B258BD5AD00DECC86 /* AppDelegate.swift in Sources */,
 				49BAA24D258BD5AD00DECC86 /* SceneDelegate.swift in Sources */,
+				49562EF5258D7D7C00E81D1A /* HomeModel.swift in Sources */,
+				49562EF2258D7CC400E81D1A /* HomeInteractor.swift in Sources */,
+				49562EEC258D7C1D00E81D1A /* HomePresenter.swift in Sources */,
+				49562EEF258D7C8A00E81D1A /* HomeRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +332,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.simran.app.GreenGroceryViperApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -323,7 +351,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.simran.app.GreenGroceryViperApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
