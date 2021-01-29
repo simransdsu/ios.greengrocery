@@ -6,23 +6,29 @@ protocol HomeView: class {
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var helloLabel: UILabel!
+    @IBOutlet weak var containerStackView: UIStackView!
+    lazy var addBagControl: AddBagControl = {
+        let control = AddBagControl.loadFromNib()
+        control.configure { stepperValue in
+            print("Bag Step Value: \(stepperValue)")
+        }
+        return control
+    }()
+    
     
     // ViewController only knows about the presenter. It just talks with it, rest is the responsibility of the Presenter to hold ther VIPER objects.
     var presenter: HomePresentation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // To do anything, VC calls something from the presenter
-        self.presenter.viewDidLoad()
+        
+        self.containerStackView.addArrangedSubview(addBagControl)
     }
 }
 
 extension HomeViewController : HomeView {
-    
-    // This method is called through the presenter to talk back to the VC
     func updateTitle(title: String) {
-        helloLabel.text = title
+        
     }
 }
 

@@ -16,31 +16,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfQ-mU-P1b">
-                                <rect key="frame" x="107" y="423" width="200" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TGN-6u-alO">
+                                <rect key="frame" x="20" y="423" width="374" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="nRZ-2r-nep"/>
-                                    <constraint firstAttribute="height" constant="50" id="sqM-1V-fMO"/>
+                                    <constraint firstAttribute="height" constant="50" id="vLi-yb-QNX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="jfQ-mU-P1b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dWh-nI-DLY"/>
-                            <constraint firstItem="jfQ-mU-P1b" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nX9-VR-hBF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TGN-6u-alO" secondAttribute="trailing" constant="20" id="LJe-Hu-HRs"/>
+                            <constraint firstItem="TGN-6u-alO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Pg3-Im-Lds"/>
+                            <constraint firstItem="TGN-6u-alO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tco-wC-gqq"/>
+                            <constraint firstItem="TGN-6u-alO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="n1r-ao-gbK"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="helloLabel" destination="jfQ-mU-P1b" id="GxQ-3y-fIh"/>
+                        <outlet property="containerStackView" destination="TGN-6u-alO" id="mjf-VF-S7O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="645" y="135"/>
+            <point key="canvasLocation" x="644.92753623188412" y="134.59821428571428"/>
         </scene>
     </scenes>
     <resources>

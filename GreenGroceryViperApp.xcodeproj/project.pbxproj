@@ -11,6 +11,9 @@
 		49562EEF258D7C8A00E81D1A /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49562EEE258D7C8A00E81D1A /* HomeRouter.swift */; };
 		49562EF2258D7CC400E81D1A /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49562EF1258D7CC400E81D1A /* HomeInteractor.swift */; };
 		49562EF5258D7D7C00E81D1A /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49562EF4258D7D7C00E81D1A /* HomeModel.swift */; };
+		49AA550125C3EDF400D41EC8 /* AddBagControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AA550025C3EDF400D41EC8 /* AddBagControl.swift */; };
+		49AA550425C3EE0500D41EC8 /* AddBagControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49AA550325C3EE0500D41EC8 /* AddBagControl.xib */; };
+		49AA550925C3F02700D41EC8 /* ViewLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AA550825C3F02700D41EC8 /* ViewLoadable.swift */; };
 		49BAA24B258BD5AD00DECC86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA24A258BD5AD00DECC86 /* AppDelegate.swift */; };
 		49BAA24D258BD5AD00DECC86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA24C258BD5AD00DECC86 /* SceneDelegate.swift */; };
 		49BAA24F258BD5AD00DECC86 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BAA24E258BD5AD00DECC86 /* HomeViewController.swift */; };
@@ -25,6 +28,9 @@
 		49562EEE258D7C8A00E81D1A /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		49562EF1258D7CC400E81D1A /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		49562EF4258D7D7C00E81D1A /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		49AA550025C3EDF400D41EC8 /* AddBagControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBagControl.swift; sourceTree = "<group>"; };
+		49AA550325C3EE0500D41EC8 /* AddBagControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddBagControl.xib; sourceTree = "<group>"; };
+		49AA550825C3F02700D41EC8 /* ViewLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLoadable.swift; sourceTree = "<group>"; };
 		49BAA247258BD5AD00DECC86 /* GreenGroceryViperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenGroceryViperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49BAA24A258BD5AD00DECC86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49BAA24C258BD5AD00DECC86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +61,31 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		49AA54FE25C3EDCE00D41EC8 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				49AA54FF25C3EDD600D41EC8 /* AddBagControl */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		49AA54FF25C3EDD600D41EC8 /* AddBagControl */ = {
+			isa = PBXGroup;
+			children = (
+				49AA550025C3EDF400D41EC8 /* AddBagControl.swift */,
+				49AA550325C3EE0500D41EC8 /* AddBagControl.xib */,
+			);
+			path = AddBagControl;
+			sourceTree = "<group>";
+		};
+		49AA550725C3F01900D41EC8 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				49AA550825C3F02700D41EC8 /* ViewLoadable.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		49BAA23E258BD5AD00DECC86 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +105,8 @@
 		49BAA249258BD5AD00DECC86 /* GreenGroceryViperApp */ = {
 			isa = PBXGroup;
 			children = (
+				49AA550725C3F01900D41EC8 /* Shared */,
+				49AA54FE25C3EDCE00D41EC8 /* Controls */,
 				49562EF7258D7DC600E81D1A /* Entity */,
 				49BAA25F258BD5EB00DECC86 /* HomeModule */,
 				49BAA24A258BD5AD00DECC86 /* AppDelegate.swift */,
@@ -157,6 +190,7 @@
 			files = (
 				49BAA257258BD5AF00DECC86 /* LaunchScreen.storyboard in Resources */,
 				49BAA254258BD5AF00DECC86 /* Assets.xcassets in Resources */,
+				49AA550425C3EE0500D41EC8 /* AddBagControl.xib in Resources */,
 				49BAA252258BD5AD00DECC86 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,6 +209,8 @@
 				49562EF5258D7D7C00E81D1A /* HomeModel.swift in Sources */,
 				49562EF2258D7CC400E81D1A /* HomeInteractor.swift in Sources */,
 				49562EEC258D7C1D00E81D1A /* HomePresenter.swift in Sources */,
+				49AA550125C3EDF400D41EC8 /* AddBagControl.swift in Sources */,
+				49AA550925C3F02700D41EC8 /* ViewLoadable.swift in Sources */,
 				49562EEF258D7C8A00E81D1A /* HomeRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

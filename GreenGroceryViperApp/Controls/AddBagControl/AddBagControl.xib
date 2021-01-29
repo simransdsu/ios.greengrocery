@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="AddBagControl" id="iN0-l3-epB" customClass="AddBagControl" customModule="GreenGroceryViperApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="407" height="236"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MnP-Md-jfA">
+                    <rect key="frame" x="128.5" y="98" width="150" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="l6a-u5-CBD"/>
+                        <constraint firstAttribute="height" constant="40" id="wWi-hE-kvk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <state key="normal" title="ADD TO BAG">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="addToBag:" destination="iN0-l3-epB" eventType="touchUpInside" id="b8Y-cj-Icw"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5Q-k4-yMe">
+                    <rect key="frame" x="183.5" y="98" width="40" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="IXT-rb-G8y"/>
+                        <constraint firstAttribute="height" constant="40" id="gyl-pc-Phm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCT-bD-PfX">
+                    <rect key="frame" x="20" y="98" width="88.5" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="3hl-tf-8sx"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <state key="normal" title="-">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="decrementButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="T7p-GP-Wzj"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rb7-E6-IQ2">
+                    <rect key="frame" x="298.5" y="98" width="88.5" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="hee-z6-ApD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <state key="normal" title="+">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="incrementButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="llL-Ig-Rnm"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.091720495947392955" green="0.50726598980783044" blue="0.28722103556439571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="aCT-bD-PfX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="1zl-ac-lzt"/>
+                <constraint firstItem="rb7-E6-IQ2" firstAttribute="leading" secondItem="MnP-Md-jfA" secondAttribute="trailing" constant="20" id="AWD-UP-pJS"/>
+                <constraint firstItem="MnP-Md-jfA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Lq1-go-Jej"/>
+                <constraint firstItem="MnP-Md-jfA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="P0X-Ie-hgs"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rb7-E6-IQ2" secondAttribute="trailing" constant="20" id="Qaj-4c-V16"/>
+                <constraint firstItem="rb7-E6-IQ2" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Vtd-B6-G5R"/>
+                <constraint firstItem="MnP-Md-jfA" firstAttribute="leading" secondItem="aCT-bD-PfX" secondAttribute="trailing" constant="20" id="XvD-EL-TMJ"/>
+                <constraint firstItem="f5Q-k4-yMe" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Zi3-6w-5g6"/>
+                <constraint firstItem="aCT-bD-PfX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="nee-rq-z0w"/>
+                <constraint firstItem="f5Q-k4-yMe" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="sco-UM-aZU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addButton" destination="MnP-Md-jfA" id="aWw-4A-Jdk"/>
+                <outlet property="minusButton" destination="aCT-bD-PfX" id="8sA-Pn-Os2"/>
+                <outlet property="plusButton" destination="rb7-E6-IQ2" id="5gr-tM-Wh4"/>
+                <outlet property="stepLabel" destination="f5Q-k4-yMe" id="nlA-kf-huP"/>
+            </connections>
+            <point key="canvasLocation" x="329.71014492753625" y="-99.107142857142847"/>
+        </view>
+    </objects>
+</document>
