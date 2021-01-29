@@ -1,10 +1,3 @@
-//
-//  HomeModuleBuilder.swift
-//  GreenGroceryViperApp
-//
-//  Created by jc on 2020-12-20.
-//
-
 import UIKit
 
 class HomeModuleBuilder {

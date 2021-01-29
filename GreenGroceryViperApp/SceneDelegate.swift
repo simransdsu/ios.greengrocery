@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  GreenGroceryViperApp
-//
-//  Created by jc on 2020-12-17.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

@@ -1,12 +1,7 @@
-//
-//  HomeInteractor.swift
-//  GreenGroceryViperApp
-//
-//  Created by jc on 2020-12-18.
-//
-
 import Foundation
 
+// Interactor is responsible for all the uses cases such making network calls for the View it is attached to via presenter
+// Making Db operations etc etc.
 protocol HomeUseCase {
     func getTitle() -> HomeModel
 }
