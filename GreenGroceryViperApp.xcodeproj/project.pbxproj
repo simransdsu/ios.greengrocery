@@ -11,6 +11,7 @@
 		49562EEF258D7C8A00E81D1A /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49562EEE258D7C8A00E81D1A /* HomeRouter.swift */; };
 		49562EF2258D7CC400E81D1A /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49562EF1258D7CC400E81D1A /* HomeInteractor.swift */; };
 		49562EF5258D7D7C00E81D1A /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49562EF4258D7D7C00E81D1A /* HomeModel.swift */; };
+		4978BCB725C614830077C8FA /* GroceryItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4978BCB625C614830077C8FA /* GroceryItemViewModel.swift */; };
 		49AA550125C3EDF400D41EC8 /* AddBagControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AA550025C3EDF400D41EC8 /* AddBagControl.swift */; };
 		49AA550425C3EE0500D41EC8 /* AddBagControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49AA550325C3EE0500D41EC8 /* AddBagControl.xib */; };
 		49AA550925C3F02700D41EC8 /* ViewLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AA550825C3F02700D41EC8 /* ViewLoadable.swift */; };
@@ -20,6 +21,13 @@
 		49BAA252258BD5AD00DECC86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BAA250258BD5AD00DECC86 /* Main.storyboard */; };
 		49BAA254258BD5AF00DECC86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49BAA253258BD5AF00DECC86 /* Assets.xcassets */; };
 		49BAA257258BD5AF00DECC86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BAA255258BD5AF00DECC86 /* LaunchScreen.storyboard */; };
+		49BE25BA25C60AC90056D2B2 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 49BE25B925C60AC90056D2B2 /* products.json */; };
+		49BE25BE25C60CF80056D2B2 /* GroceryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BE25BC25C60CF80056D2B2 /* GroceryItemCell.swift */; };
+		49BE25BF25C60CF80056D2B2 /* GroceryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49BE25BD25C60CF80056D2B2 /* GroceryItemCell.xib */; };
+		49BE25C525C60F3C0056D2B2 /* StubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BE25C425C60F3C0056D2B2 /* StubService.swift */; };
+		49BE25CA25C60F9A0056D2B2 /* GroceriesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BE25C925C60F9A0056D2B2 /* GroceriesAPI.swift */; };
+		49BE25CF25C610910056D2B2 /* GroceryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BE25CE25C610910056D2B2 /* GroceryResult.swift */; };
+		49BE25D225C610AC0056D2B2 /* Grocery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BE25D125C610AC0056D2B2 /* Grocery.swift */; };
 		49F78D5925901BD60085ABB6 /* HomeModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F78D5825901BD60085ABB6 /* HomeModuleBuilder.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +36,7 @@
 		49562EEE258D7C8A00E81D1A /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		49562EF1258D7CC400E81D1A /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		49562EF4258D7D7C00E81D1A /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		4978BCB625C614830077C8FA /* GroceryItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemViewModel.swift; sourceTree = "<group>"; };
 		49AA550025C3EDF400D41EC8 /* AddBagControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBagControl.swift; sourceTree = "<group>"; };
 		49AA550325C3EE0500D41EC8 /* AddBagControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddBagControl.xib; sourceTree = "<group>"; };
 		49AA550825C3F02700D41EC8 /* ViewLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLoadable.swift; sourceTree = "<group>"; };
@@ -39,6 +48,13 @@
 		49BAA253258BD5AF00DECC86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49BAA256258BD5AF00DECC86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49BAA258258BD5AF00DECC86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49BE25B925C60AC90056D2B2 /* products.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
+		49BE25BC25C60CF80056D2B2 /* GroceryItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemCell.swift; sourceTree = "<group>"; };
+		49BE25BD25C60CF80056D2B2 /* GroceryItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroceryItemCell.xib; sourceTree = "<group>"; };
+		49BE25C425C60F3C0056D2B2 /* StubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubService.swift; sourceTree = "<group>"; };
+		49BE25C925C60F9A0056D2B2 /* GroceriesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceriesAPI.swift; sourceTree = "<group>"; };
+		49BE25CE25C610910056D2B2 /* GroceryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryResult.swift; sourceTree = "<group>"; };
+		49BE25D125C610AC0056D2B2 /* Grocery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grocery.swift; sourceTree = "<group>"; };
 		49F78D5825901BD60085ABB6 /* HomeModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +80,7 @@
 		49AA54FE25C3EDCE00D41EC8 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				49BE25C125C60CFC0056D2B2 /* GroceryItemCell */,
 				49AA54FF25C3EDD600D41EC8 /* AddBagControl */,
 			);
 			path = Controls;
@@ -105,6 +122,9 @@
 		49BAA249258BD5AD00DECC86 /* GreenGroceryViperApp */ = {
 			isa = PBXGroup;
 			children = (
+				49BE25CD25C6107D0056D2B2 /* Models */,
+				49BE25C325C60F200056D2B2 /* HttpService */,
+				49BE25B825C60A9E0056D2B2 /* Resources */,
 				49AA550725C3F01900D41EC8 /* Shared */,
 				49AA54FE25C3EDCE00D41EC8 /* Controls */,
 				49562EF7258D7DC600E81D1A /* Entity */,
@@ -129,6 +149,58 @@
 				49F78D5825901BD60085ABB6 /* HomeModuleBuilder.swift */,
 			);
 			path = HomeModule;
+			sourceTree = "<group>";
+		};
+		49BE25B825C60A9E0056D2B2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				49BE25B925C60AC90056D2B2 /* products.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		49BE25C125C60CFC0056D2B2 /* GroceryItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				49BE25BC25C60CF80056D2B2 /* GroceryItemCell.swift */,
+				49BE25BD25C60CF80056D2B2 /* GroceryItemCell.xib */,
+				4978BCB625C614830077C8FA /* GroceryItemViewModel.swift */,
+			);
+			path = GroceryItemCell;
+			sourceTree = "<group>";
+		};
+		49BE25C325C60F200056D2B2 /* HttpService */ = {
+			isa = PBXGroup;
+			children = (
+				49BE25C825C60F8E0056D2B2 /* Contracts */,
+				49BE25C425C60F3C0056D2B2 /* StubService.swift */,
+			);
+			path = HttpService;
+			sourceTree = "<group>";
+		};
+		49BE25C825C60F8E0056D2B2 /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				49BE25C925C60F9A0056D2B2 /* GroceriesAPI.swift */,
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
+		49BE25CD25C6107D0056D2B2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				49BE25D425C610D10056D2B2 /* APIRequestResponses */,
+				49BE25D125C610AC0056D2B2 /* Grocery.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		49BE25D425C610D10056D2B2 /* APIRequestResponses */ = {
+			isa = PBXGroup;
+			children = (
+				49BE25CE25C610910056D2B2 /* GroceryResult.swift */,
+			);
+			path = APIRequestResponses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +261,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				49BAA257258BD5AF00DECC86 /* LaunchScreen.storyboard in Resources */,
+				49BE25BA25C60AC90056D2B2 /* products.json in Resources */,
+				49BE25BF25C60CF80056D2B2 /* GroceryItemCell.xib in Resources */,
 				49BAA254258BD5AF00DECC86 /* Assets.xcassets in Resources */,
 				49AA550425C3EE0500D41EC8 /* AddBagControl.xib in Resources */,
 				49BAA252258BD5AD00DECC86 /* Main.storyboard in Resources */,
@@ -204,14 +278,20 @@
 			files = (
 				49F78D5925901BD60085ABB6 /* HomeModuleBuilder.swift in Sources */,
 				49BAA24F258BD5AD00DECC86 /* HomeViewController.swift in Sources */,
+				49BE25CF25C610910056D2B2 /* GroceryResult.swift in Sources */,
+				49BE25BE25C60CF80056D2B2 /* GroceryItemCell.swift in Sources */,
 				49BAA24B258BD5AD00DECC86 /* AppDelegate.swift in Sources */,
+				49BE25CA25C60F9A0056D2B2 /* GroceriesAPI.swift in Sources */,
 				49BAA24D258BD5AD00DECC86 /* SceneDelegate.swift in Sources */,
 				49562EF5258D7D7C00E81D1A /* HomeModel.swift in Sources */,
 				49562EF2258D7CC400E81D1A /* HomeInteractor.swift in Sources */,
 				49562EEC258D7C1D00E81D1A /* HomePresenter.swift in Sources */,
 				49AA550125C3EDF400D41EC8 /* AddBagControl.swift in Sources */,
+				4978BCB725C614830077C8FA /* GroceryItemViewModel.swift in Sources */,
 				49AA550925C3F02700D41EC8 /* ViewLoadable.swift in Sources */,
 				49562EEF258D7C8A00E81D1A /* HomeRouter.swift in Sources */,
+				49BE25C525C60F3C0056D2B2 /* StubService.swift in Sources */,
+				49BE25D225C610AC0056D2B2 /* Grocery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

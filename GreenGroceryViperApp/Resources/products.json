@@ -1,0 +1,39 @@
+{
+    "groceries": [
+        {
+            "sku-id": "100001A",
+            "title": "Aooke",
+            "product_image": "apple",
+            "details": "Nature fresh kashmiri apples.",
+            "price": 3.99
+        },
+        {
+            "sku-id": "100002A",
+            "title": "Watermelon",
+            "product_image": "watermelon",
+            "details": "Red ripe watermelon.",
+            "price": 2.99
+        },
+        {
+            "sku-id": "100003A",
+            "title": "Red Grapes",
+            "product_image": "grapes",
+            "details": "Seedless red grapes fresh from the grapeyard.",
+            "price": 4.99
+        },
+        {
+            "sku-id": "100004A",
+            "title": "Green Grapes",
+            "product_image": "green-grapes",
+            "details": "Seeded green grapes fresh.",
+            "price": 3.99
+        },
+        {
+            "sku-id": "100004A",
+            "title": "Banana",
+            "product_image": "banana",
+            "details": "Bright yellow bananas for a great breakfast.",
+            "price": 1.99
+        }
+    ]
+}

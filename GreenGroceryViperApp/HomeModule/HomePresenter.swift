@@ -29,10 +29,15 @@ extension HomePresenter : HomePresentation {
     
     // This method interacts with the Interactor and passes the info to VC via the VC Delegate.
     func viewDidLoad() {
-        let homeModel = self.interactor.getTitle()
-        DispatchQueue.main.async { [weak self] in
+        DispatchQueue.global(qos: .background).async { [weak self] in
             guard let self = self else { return }
-            self.view?.updateTitle(title: homeModel.title)
+            self.interactor.fetchGroceries { (result) in
+                let groceryList = result.groceries.compactMap{ GroceryItemViewModel(usingModel: $0) }
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else { return }
+                    self.view?.updateGroceries(groceriesList: groceryList)
+                }
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,15 +13,46 @@
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeViewController" customModule="GreenGroceryViperApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gkU-1b-BRV">
+                                <rect key="frame" x="0.0" y="119" width="375" height="659"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="nPI-hs-RwB"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="exZ-iI-ZR6"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick Fresh Groceries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ui6-30-YC1">
+                                <rect key="frame" x="16" y="44" width="343" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="3Gz-NB-X3q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="27"/>
+                                <color key="textColor" red="0.52903765097431754" green="0.081844934282391937" blue="0.17255004261626308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gkU-1b-BRV" firstAttribute="top" secondItem="ui6-30-YC1" secondAttribute="bottom" constant="8" symbolic="YES" id="2rg-Pe-Dzc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gkU-1b-BRV" secondAttribute="bottom" id="B12-u2-WR7"/>
+                            <constraint firstItem="ui6-30-YC1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="aMi-8F-P3y"/>
+                            <constraint firstItem="ui6-30-YC1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="g8Y-ep-z5C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ui6-30-YC1" secondAttribute="trailing" constant="16" id="op8-By-bkt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gkU-1b-BRV" secondAttribute="trailing" id="tRD-wC-Gb3"/>
+                            <constraint firstItem="gkU-1b-BRV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="w5h-3j-xwl"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="gkU-1b-BRV" id="hqV-5k-Ibj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="644.92753623188412" y="134.59821428571428"/>
+            <point key="canvasLocation" x="712.79999999999995" y="104.92610837438424"/>
         </scene>
     </scenes>
     <resources>
