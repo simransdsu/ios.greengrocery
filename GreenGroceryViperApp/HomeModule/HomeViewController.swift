@@ -9,7 +9,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var containerStackView: UIStackView!
     lazy var addBagControl: AddBagControl = {
         let control = AddBagControl.loadFromNib()
-        control.configure { stepperValue in
+        let viewModel = AddBagViewModel(title: "ADD TO BAG", stepValue: 0)
+        control.configure(usingViewModel: viewModel) { stepperValue in
             print("Bag Step Value: \(stepperValue)")
         }
         return control

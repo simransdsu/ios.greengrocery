@@ -12,41 +12,68 @@ class AddBagControl: UIView, ViewLoadable {
     
     var closure: BagClosure?
     
-    var stepperValue: Int = 0 {
+    var viewModel: AddBagViewModel! {
         didSet {
-            let isHidden = stepperValue > 0
-            
+            let isHidden = viewModel.showStepper
             addButton.isHidden = isHidden
             plusButton.isHidden = !isHidden
             minusButton.isHidden = !isHidden
             stepLabel.isHidden = !isHidden
-            stepLabel.text = "\(stepperValue)"
+            stepLabel.text = "\(viewModel.stepValue)"
         }
     }
     
     @IBAction func addToBag(_ sender: Any) {
-        stepperValue = 1
-        self.closure?(stepperValue)
+        self.viewModel = self.viewModel.onAddToBag()
+        self.closure?(viewModel.stepValue)
     }
     
     @IBAction func incrementButton(_ sender: Any) {
-        guard stepperValue < 10 else { return }
-        stepperValue += 1
-        self.closure?(stepperValue)
+        self.viewModel = self.viewModel.onIncrement()
+        self.closure?(self.viewModel.stepValue)
     }
     
     @IBAction func decrementButton(_ sender: Any) {
-        guard stepperValue > 0 else { return }
-        stepperValue -= 1
-        self.closure?(stepperValue)
+        self.viewModel = self.viewModel.onDecrement()
+        self.closure?(self.viewModel.stepValue)
     }
     
     
     typealias BagClosure = (Int) -> Void
-    func configure(bagClosure: @escaping BagClosure) {
-        stepperValue = 0
+    func configure(usingViewModel viewModel: AddBagViewModel, bagClosure: @escaping BagClosure) {
+        self.viewModel = viewModel
+        self.addButton.setTitle(viewModel.title, for: .normal)
         self.closure = bagClosure
     }
 
 }
 
+
+
+struct AddBagViewModel {
+    let title: String
+    let stepValue: Int
+    let showStepper: Bool
+
+    init(title: String, stepValue: Int) {
+        self.title = title
+        self.stepValue = stepValue
+        self.showStepper = stepValue > 0
+    }
+}
+
+extension AddBagViewModel {
+    func onAddToBag() -> AddBagViewModel {
+        return AddBagViewModel(title: self.title, stepValue: 1)
+    }
+    
+    func onIncrement() -> AddBagViewModel {
+        guard stepValue < 10 else { return self }
+        return AddBagViewModel(title: self.title, stepValue: self.stepValue + 1)
+    }
+    
+    func onDecrement() -> AddBagViewModel {
+        guard stepValue > 0 else { return self }
+        return AddBagViewModel(title: self.title, stepValue: self.stepValue - 1)
+    }
+}
