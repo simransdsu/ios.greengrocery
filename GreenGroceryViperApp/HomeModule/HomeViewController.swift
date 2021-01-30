@@ -21,7 +21,6 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController : HomeView {
     func updateGroceries(groceriesList: [GroceryItemViewModel]) {
-        print("Grocery List: \(groceriesList)")
         dataSource = groceriesList
         self.tableView.reloadData()
     }
@@ -38,6 +37,12 @@ extension HomeViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(GroceryItemCell.self)", for: indexPath) as! GroceryItemCell
         cell.configure(withViewModel: viewModel)
         return cell
+    }
+}
+
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80.0
     }
 }
 
