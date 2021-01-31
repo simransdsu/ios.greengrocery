@@ -19,17 +19,16 @@ class GroceryItemCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func configure(withViewModel viewModel: GroceryItemViewModel) {
+    func configure(withViewModel viewModel: GroceryItemViewModel, onAddToCart: @escaping BagClosure) {
         self.groceryImageView.image = UIImage(named: viewModel.image)
         self.groceryTitleLabel.text = viewModel.title
         self.groceryPriceLabel.text = viewModel.price
         self.groceryDescriptionLabel.text = viewModel.details
+        self.selectionStyle = .none
+        groceryAddBagStepper.configure(usingViewModel: AddBagViewModel(id: viewModel.skuId, title: "Add To Bag", stepValue: 0), onStepperTap: onAddToCart)
     }
     
     fileprivate func setupStepperControl() {
-        groceryAddBagStepper.configure(usingViewModel: AddBagViewModel(title: "Add To Bag", stepValue: 0)) { (result) in
-            print(result)
-        }
         groceryAddBagStepper.translatesAutoresizingMaskIntoConstraints = false
         groceryAddBagStepperStackView.addArrangedSubview(groceryAddBagStepper)
     }

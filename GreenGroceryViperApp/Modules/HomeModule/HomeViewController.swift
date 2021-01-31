@@ -2,6 +2,7 @@ import UIKit
 
 protocol HomeView: class {
     func updateGroceries(groceriesList: [GroceryItemViewModel])
+    func addedToCart()
 }
 
 class HomeViewController: UIViewController {
@@ -21,6 +22,10 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController : HomeView {
+    func addedToCart() {
+        print("Item added to cart successfully")
+    }
+    
     func updateGroceries(groceriesList: [GroceryItemViewModel]) {
         dataSource = groceriesList
         self.tableView.reloadData()
@@ -36,14 +41,16 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let viewModel = dataSource[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(GroceryItemCell.self)", for: indexPath) as! GroceryItemCell
-        cell.configure(withViewModel: viewModel)
+        cell.configure(withViewModel: viewModel) { (skuItem) in
+            self.presenter.onAddToCart(skuItem: skuItem)
+        }
         return cell
     }
 }
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 140.0
+        return 150.0
     }
 }
 

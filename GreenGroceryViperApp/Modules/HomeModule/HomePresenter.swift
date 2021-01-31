@@ -2,6 +2,7 @@ import Foundation
 
 protocol HomePresentation {
     func viewDidLoad() -> Void
+    func onAddToCart(skuItem: SkuItem)
 }
 
 
@@ -26,6 +27,20 @@ class HomePresenter {
 }
 
 extension HomePresenter : HomePresentation {
+    func onAddToCart(skuItem: SkuItem) {
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            guard let self = self else { return }
+            let updated = self.interactor.addToCart(skuItem: skuItem)
+            
+            if updated {
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else { return }
+                    self.view?.addedToCart()
+                }
+            }
+        }
+    }
+    
     
     // This method interacts with the Interactor and passes the info to VC via the VC Delegate.
     func viewDidLoad() {

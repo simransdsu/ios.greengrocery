@@ -1,4 +1,5 @@
 import UIKit
+typealias BagClosure = (SkuItem) -> Void
 
 @IBDesignable
 class AddBagControl: UIView, ViewLoadable {
@@ -26,25 +27,24 @@ class AddBagControl: UIView, ViewLoadable {
 
     @IBAction func addToBag(_ sender: Any) {
         self.viewModel = self.viewModel.onAddToBag()
-        self.closure?(viewModel.stepValue)
+        self.closure?((self.viewModel.id, self.viewModel.stepValue))
     }
     
     @IBAction func incrementButton(_ sender: Any) {
         self.viewModel = self.viewModel.onIncrement()
-        self.closure?(self.viewModel.stepValue)
+        self.closure?((self.viewModel.id, self.viewModel.stepValue))
     }
     
     @IBAction func decrementButton(_ sender: Any) {
         self.viewModel = self.viewModel.onDecrement()
-        self.closure?(self.viewModel.stepValue)
+        self.closure?((self.viewModel.id, self.viewModel.stepValue))
     }
     
     
-    typealias BagClosure = (Int) -> Void
-    func configure(usingViewModel viewModel: AddBagViewModel, bagClosure: @escaping BagClosure) {
+    func configure(usingViewModel viewModel: AddBagViewModel, onStepperTap: @escaping BagClosure) {
         self.viewModel = viewModel
         self.addButton.setTitle(viewModel.title, for: .normal)
-        self.closure = bagClosure
+        self.closure = onStepperTap
     }
 
 }
@@ -52,11 +52,13 @@ class AddBagControl: UIView, ViewLoadable {
 
 
 struct AddBagViewModel {
+    let id: String
     let title: String
     let stepValue: Int
     let showStepper: Bool
 
-    init(title: String, stepValue: Int) {
+    init(id: String = "", title: String, stepValue: Int) {
+        self.id = id
         self.title = title
         self.stepValue = stepValue
         self.showStepper = stepValue > 0

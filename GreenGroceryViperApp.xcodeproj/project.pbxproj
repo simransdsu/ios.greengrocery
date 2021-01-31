@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		492B817325C737CE002F90CE /* RealmDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B817225C737CE002F90CE /* RealmDatabase.swift */; };
+		492B817625C73824002F90CE /* CartDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492B817525C73824002F90CE /* CartDB.swift */; };
 		49562EEC258D7C1D00E81D1A /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49562EEB258D7C1D00E81D1A /* HomePresenter.swift */; };
 		49562EEF258D7C8A00E81D1A /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49562EEE258D7C8A00E81D1A /* HomeRouter.swift */; };
 		49562EF2258D7CC400E81D1A /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49562EF1258D7CC400E81D1A /* HomeInteractor.swift */; };
@@ -30,9 +32,15 @@
 		49BE25CF25C610910056D2B2 /* GroceryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BE25CE25C610910056D2B2 /* GroceryResult.swift */; };
 		49BE25D225C610AC0056D2B2 /* Grocery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BE25D125C610AC0056D2B2 /* Grocery.swift */; };
 		49F78D5925901BD60085ABB6 /* HomeModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F78D5825901BD60085ABB6 /* HomeModuleBuilder.swift */; };
+		49F9160B25C739810015694E /* RealmCartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F9160A25C739810015694E /* RealmCartItem.swift */; };
+		49F9160E25C73A8B0015694E /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F9160D25C73A8B0015694E /* CartItem.swift */; };
+		71B77FEB8C04DAA522736C89 /* Pods_GreenGroceryViperApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374654688F66A32860AA3607 /* Pods_GreenGroceryViperApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		374654688F66A32860AA3607 /* Pods_GreenGroceryViperApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreenGroceryViperApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		492B817225C737CE002F90CE /* RealmDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDatabase.swift; sourceTree = "<group>"; };
+		492B817525C73824002F90CE /* CartDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartDB.swift; sourceTree = "<group>"; };
 		49562EEB258D7C1D00E81D1A /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		49562EEE258D7C8A00E81D1A /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		49562EF1258D7CC400E81D1A /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
@@ -58,6 +66,10 @@
 		49BE25CE25C610910056D2B2 /* GroceryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryResult.swift; sourceTree = "<group>"; };
 		49BE25D125C610AC0056D2B2 /* Grocery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grocery.swift; sourceTree = "<group>"; };
 		49F78D5825901BD60085ABB6 /* HomeModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleBuilder.swift; sourceTree = "<group>"; };
+		49F9160A25C739810015694E /* RealmCartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCartItem.swift; sourceTree = "<group>"; };
+		49F9160D25C73A8B0015694E /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
+		50FAB9DAE7C7840BBFFC3742 /* Pods-GreenGroceryViperApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenGroceryViperApp.debug.xcconfig"; path = "Target Support Files/Pods-GreenGroceryViperApp/Pods-GreenGroceryViperApp.debug.xcconfig"; sourceTree = "<group>"; };
+		FD661433E27E738DCC0A3E7B /* Pods-GreenGroceryViperApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenGroceryViperApp.release.xcconfig"; path = "Target Support Files/Pods-GreenGroceryViperApp/Pods-GreenGroceryViperApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,16 +77,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71B77FEB8C04DAA522736C89 /* Pods_GreenGroceryViperApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		49562EF7258D7DC600E81D1A /* Entity */ = {
+		492B817125C737AD002F90CE /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				49562EF4258D7D7C00E81D1A /* HomeModel.swift */,
+				492B817925C7388D002F90CE /* Entity */,
+				492B817525C73824002F90CE /* CartDB.swift */,
+				492B817225C737CE002F90CE /* RealmDatabase.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		492B817925C7388D002F90CE /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				49F9160A25C739810015694E /* RealmCartItem.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -96,13 +119,13 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
-		49AA54FE25C3EDCE00D41EC8 /* Controls */ = {
+		49AA54FE25C3EDCE00D41EC8 /* UIControls */ = {
 			isa = PBXGroup;
 			children = (
 				49BE25C125C60CFC0056D2B2 /* GroceryItemCell */,
 				49AA54FF25C3EDD600D41EC8 /* AddBagControl */,
 			);
-			path = Controls;
+			path = UIControls;
 			sourceTree = "<group>";
 		};
 		49AA54FF25C3EDD600D41EC8 /* AddBagControl */ = {
@@ -127,6 +150,8 @@
 			children = (
 				49BAA249258BD5AD00DECC86 /* GreenGroceryViperApp */,
 				49BAA248258BD5AD00DECC86 /* Products */,
+				D5D1D25B443B3F6B474E09A6 /* Pods */,
+				713F3F04CE928EF93544F7CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,12 +167,12 @@
 			isa = PBXGroup;
 			children = (
 				4978BCB925C63AC20077C8FA /* Modules */,
+				492B817125C737AD002F90CE /* Database */,
 				49BE25CD25C6107D0056D2B2 /* Models */,
 				49BE25C325C60F200056D2B2 /* HttpService */,
 				49BE25B825C60A9E0056D2B2 /* Resources */,
 				49AA550725C3F01900D41EC8 /* Shared */,
-				49AA54FE25C3EDCE00D41EC8 /* Controls */,
-				49562EF7258D7DC600E81D1A /* Entity */,
+				49AA54FE25C3EDCE00D41EC8 /* UIControls */,
 				49BAA24A258BD5AD00DECC86 /* AppDelegate.swift */,
 				49BAA24C258BD5AD00DECC86 /* SceneDelegate.swift */,
 				49BAA250258BD5AD00DECC86 /* Main.storyboard */,
@@ -209,7 +234,9 @@
 			isa = PBXGroup;
 			children = (
 				49BE25D425C610D10056D2B2 /* APIRequestResponses */,
+				49562EF4258D7D7C00E81D1A /* HomeModel.swift */,
 				49BE25D125C610AC0056D2B2 /* Grocery.swift */,
+				49F9160D25C73A8B0015694E /* CartItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,6 +249,23 @@
 			path = APIRequestResponses;
 			sourceTree = "<group>";
 		};
+		713F3F04CE928EF93544F7CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				374654688F66A32860AA3607 /* Pods_GreenGroceryViperApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D5D1D25B443B3F6B474E09A6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				50FAB9DAE7C7840BBFFC3742 /* Pods-GreenGroceryViperApp.debug.xcconfig */,
+				FD661433E27E738DCC0A3E7B /* Pods-GreenGroceryViperApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -229,9 +273,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49BAA25B258BD5AF00DECC86 /* Build configuration list for PBXNativeTarget "GreenGroceryViperApp" */;
 			buildPhases = (
+				FD4A8B1C46841372C45D0FBC /* [CP] Check Pods Manifest.lock */,
 				49BAA243258BD5AD00DECC86 /* Sources */,
 				49BAA244258BD5AD00DECC86 /* Frameworks */,
 				49BAA245258BD5AD00DECC86 /* Resources */,
+				79EAC0A155595BFDA4BD5BB4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -290,6 +336,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		79EAC0A155595BFDA4BD5BB4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GreenGroceryViperApp/Pods-GreenGroceryViperApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GreenGroceryViperApp/Pods-GreenGroceryViperApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GreenGroceryViperApp/Pods-GreenGroceryViperApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD4A8B1C46841372C45D0FBC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GreenGroceryViperApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		49BAA243258BD5AD00DECC86 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -299,6 +387,7 @@
 				49BAA24F258BD5AD00DECC86 /* HomeViewController.swift in Sources */,
 				49BE25CF25C610910056D2B2 /* GroceryResult.swift in Sources */,
 				49BE25BE25C60CF80056D2B2 /* GroceryItemCell.swift in Sources */,
+				49F9160B25C739810015694E /* RealmCartItem.swift in Sources */,
 				4978BCBC25C63AD50077C8FA /* NavigationBuilder.swift in Sources */,
 				49BAA24B258BD5AD00DECC86 /* AppDelegate.swift in Sources */,
 				49BE25CA25C60F9A0056D2B2 /* GroceriesAPI.swift in Sources */,
@@ -307,10 +396,13 @@
 				49562EF2258D7CC400E81D1A /* HomeInteractor.swift in Sources */,
 				49562EEC258D7C1D00E81D1A /* HomePresenter.swift in Sources */,
 				49AA550125C3EDF400D41EC8 /* AddBagControl.swift in Sources */,
+				49F9160E25C73A8B0015694E /* CartItem.swift in Sources */,
 				4978BCB725C614830077C8FA /* GroceryItemViewModel.swift in Sources */,
 				49AA550925C3F02700D41EC8 /* ViewLoadable.swift in Sources */,
+				492B817325C737CE002F90CE /* RealmDatabase.swift in Sources */,
 				49562EEF258D7C8A00E81D1A /* HomeRouter.swift in Sources */,
 				49BE25C525C60F3C0056D2B2 /* StubService.swift in Sources */,
+				492B817625C73824002F90CE /* CartDB.swift in Sources */,
 				49BE25D225C610AC0056D2B2 /* Grocery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,6 +547,7 @@
 		};
 		49BAA25C258BD5AF00DECC86 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50FAB9DAE7C7840BBFFC3742 /* Pods-GreenGroceryViperApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -474,6 +567,7 @@
 		};
 		49BAA25D258BD5AF00DECC86 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD661433E27E738DCC0A3E7B /* Pods-GreenGroceryViperApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
