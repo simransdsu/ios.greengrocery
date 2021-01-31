@@ -12,6 +12,7 @@
 		49562EF2258D7CC400E81D1A /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49562EF1258D7CC400E81D1A /* HomeInteractor.swift */; };
 		49562EF5258D7D7C00E81D1A /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49562EF4258D7D7C00E81D1A /* HomeModel.swift */; };
 		4978BCB725C614830077C8FA /* GroceryItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4978BCB625C614830077C8FA /* GroceryItemViewModel.swift */; };
+		4978BCBC25C63AD50077C8FA /* NavigationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4978BCBB25C63AD50077C8FA /* NavigationBuilder.swift */; };
 		49AA550125C3EDF400D41EC8 /* AddBagControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AA550025C3EDF400D41EC8 /* AddBagControl.swift */; };
 		49AA550425C3EE0500D41EC8 /* AddBagControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49AA550325C3EE0500D41EC8 /* AddBagControl.xib */; };
 		49AA550925C3F02700D41EC8 /* ViewLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AA550825C3F02700D41EC8 /* ViewLoadable.swift */; };
@@ -37,6 +38,7 @@
 		49562EF1258D7CC400E81D1A /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		49562EF4258D7D7C00E81D1A /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		4978BCB625C614830077C8FA /* GroceryItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemViewModel.swift; sourceTree = "<group>"; };
+		4978BCBB25C63AD50077C8FA /* NavigationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBuilder.swift; sourceTree = "<group>"; };
 		49AA550025C3EDF400D41EC8 /* AddBagControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBagControl.swift; sourceTree = "<group>"; };
 		49AA550325C3EE0500D41EC8 /* AddBagControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddBagControl.xib; sourceTree = "<group>"; };
 		49AA550825C3F02700D41EC8 /* ViewLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLoadable.swift; sourceTree = "<group>"; };
@@ -75,6 +77,23 @@
 				49562EF4258D7D7C00E81D1A /* HomeModel.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		4978BCB925C63AC20077C8FA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				4978BCBA25C63AC60077C8FA /* Navigation */,
+				49BAA25F258BD5EB00DECC86 /* HomeModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		4978BCBA25C63AC60077C8FA /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				4978BCBB25C63AD50077C8FA /* NavigationBuilder.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		49AA54FE25C3EDCE00D41EC8 /* Controls */ = {
@@ -122,13 +141,13 @@
 		49BAA249258BD5AD00DECC86 /* GreenGroceryViperApp */ = {
 			isa = PBXGroup;
 			children = (
+				4978BCB925C63AC20077C8FA /* Modules */,
 				49BE25CD25C6107D0056D2B2 /* Models */,
 				49BE25C325C60F200056D2B2 /* HttpService */,
 				49BE25B825C60A9E0056D2B2 /* Resources */,
 				49AA550725C3F01900D41EC8 /* Shared */,
 				49AA54FE25C3EDCE00D41EC8 /* Controls */,
 				49562EF7258D7DC600E81D1A /* Entity */,
-				49BAA25F258BD5EB00DECC86 /* HomeModule */,
 				49BAA24A258BD5AD00DECC86 /* AppDelegate.swift */,
 				49BAA24C258BD5AD00DECC86 /* SceneDelegate.swift */,
 				49BAA250258BD5AD00DECC86 /* Main.storyboard */,
@@ -280,6 +299,7 @@
 				49BAA24F258BD5AD00DECC86 /* HomeViewController.swift in Sources */,
 				49BE25CF25C610910056D2B2 /* GroceryResult.swift in Sources */,
 				49BE25BE25C60CF80056D2B2 /* GroceryItemCell.swift in Sources */,
+				4978BCBC25C63AD50077C8FA /* NavigationBuilder.swift in Sources */,
 				49BAA24B258BD5AD00DECC86 /* AppDelegate.swift in Sources */,
 				49BE25CA25C60F9A0056D2B2 /* GroceriesAPI.swift in Sources */,
 				49BAA24D258BD5AD00DECC86 /* SceneDelegate.swift in Sources */,

@@ -6,9 +6,13 @@ class GroceryItemCell: UITableViewCell {
     @IBOutlet weak var groceryTitleLabel: UILabel!
     @IBOutlet weak var groceryDescriptionLabel: UILabel!
     @IBOutlet weak var groceryPriceLabel: UILabel!
+    @IBOutlet weak var groceryAddBagStepperStackView: UIStackView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    var groceryAddBagStepper: AddBagControl = AddBagControl.loadFromNib()
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        setupStepperControl()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -20,5 +24,13 @@ class GroceryItemCell: UITableViewCell {
         self.groceryTitleLabel.text = viewModel.title
         self.groceryPriceLabel.text = viewModel.price
         self.groceryDescriptionLabel.text = viewModel.details
+    }
+    
+    fileprivate func setupStepperControl() {
+        groceryAddBagStepper.configure(usingViewModel: AddBagViewModel(title: "Add To Bag", stepValue: 0)) { (result) in
+            print(result)
+        }
+        groceryAddBagStepper.translatesAutoresizingMaskIntoConstraints = false
+        groceryAddBagStepperStackView.addArrangedSubview(groceryAddBagStepper)
     }
 }

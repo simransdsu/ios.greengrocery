@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         self.presenter.viewDidLoad()
         self.tableView.register(UINib(nibName: "\(GroceryItemCell.self)", bundle: nil), forCellReuseIdentifier: "\(GroceryItemCell.self)")
+        self.title = "Fresh Groceries"
     }
 }
 
@@ -42,7 +43,7 @@ extension HomeViewController: UITableViewDataSource {
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80.0
+        return 140.0
     }
 }
 

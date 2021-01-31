@@ -1,5 +1,6 @@
 import UIKit
 
+@IBDesignable
 class AddBagControl: UIView, ViewLoadable {
 
     // Coming from `ViewLoading` protocol.
@@ -22,7 +23,7 @@ class AddBagControl: UIView, ViewLoadable {
             stepLabel.text = "\(viewModel.stepValue)"
         }
     }
-    
+
     @IBAction func addToBag(_ sender: Any) {
         self.viewModel = self.viewModel.onAddToBag()
         self.closure?(viewModel.stepValue)

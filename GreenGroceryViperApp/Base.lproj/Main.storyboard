@@ -17,31 +17,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gkU-1b-BRV">
-                                <rect key="frame" x="0.0" y="119" width="375" height="659"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="nPI-hs-RwB"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="exZ-iI-ZR6"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick Fresh Groceries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ui6-30-YC1">
-                                <rect key="frame" x="16" y="44" width="343" height="67"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="3Gz-NB-X3q"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="27"/>
-                                <color key="textColor" red="0.52903765097431754" green="0.081844934282391937" blue="0.17255004261626308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gkU-1b-BRV" firstAttribute="top" secondItem="ui6-30-YC1" secondAttribute="bottom" constant="8" symbolic="YES" id="2rg-Pe-Dzc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gkU-1b-BRV" secondAttribute="bottom" id="B12-u2-WR7"/>
-                            <constraint firstItem="ui6-30-YC1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="aMi-8F-P3y"/>
-                            <constraint firstItem="ui6-30-YC1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="g8Y-ep-z5C"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ui6-30-YC1" secondAttribute="trailing" constant="16" id="op8-By-bkt"/>
+                            <constraint firstItem="gkU-1b-BRV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RoM-ZU-0o0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gkU-1b-BRV" secondAttribute="trailing" id="tRD-wC-Gb3"/>
                             <constraint firstItem="gkU-1b-BRV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="w5h-3j-xwl"/>
                         </constraints>
